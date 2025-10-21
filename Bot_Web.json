@@ -1,0 +1,189 @@
+{
+  "name": "Bot_Web",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "chat-bot",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "2912a640-2275-4f1f-841e-a58ebfadc873",
+      "name": "Webhook",
+      "webhookId": "074b280d-265c-4598-9ee8-b543dc6dcfbb"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.body.question }}",
+        "options": {
+          "systemMessage": "Hãy là nhân viên chăm sóc khách hàng của Sản Phụ Khoa Màu Hồng trả lời tin nhắn ngắn gọn nhất và lịch sự.\n# Lưu ý là hiện tại không có dịch vụ đặt lịch khám online. Vui lòng tới xếp số trực tiếp tại phòng khám.\n\n# Tất cả câu hỏi về dịch vụ khám chữa bệnh gì hãy hướng dẫn tới phòng khám để được thăm khám, tư vấn trực tiếp. Không khám online\n# Các câu hỏi địa chỉ thì trả lời ở : Số 68 Vạn Phúc, Hà Đông, Hà Nội"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.1,
+      "position": [
+        208,
+        0
+      ],
+      "id": "c05da106-6ad0-4bb8-a070-8624632a9e2c",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        224,
+        240
+      ],
+      "id": "1dcfe8ca-40dd-4e1a-8ecc-2dc1ce09b109",
+      "name": "Google Gemini Chat Model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "19joFdn43JXPY7Ki",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "=[\n  {\n    \"output\": {{ JSON.stringify($json.output) }}\n  }\n]\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.4,
+      "position": [
+        576,
+        0
+      ],
+      "id": "c06985bb-d9db-40e8-bd37-81cbe1cdc4d1",
+      "name": "Respond to Webhook"
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $('Webhook').item.json.headers['cf-connecting-ip'] }}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        384,
+        240
+      ],
+      "id": "a3d3965d-ea76-4936-a002-ea5a91b295be",
+      "name": "Simple Memory"
+    }
+  ],
+  "pinData": {
+    "Webhook": [
+      {
+        "json": {
+          "headers": {
+            "host": "7hnngdy7.rpcl.dev",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+            "content-length": "41",
+            "accept": "*/*",
+            "accept-encoding": "gzip, br",
+            "accept-language": "vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5",
+            "cdn-loop": "cloudflare; loops=1",
+            "cf-connecting-ip": "27.3.111.154",
+            "cf-ipcountry": "VN",
+            "cf-ray": "982e573c5cdac7ba-SGN",
+            "cf-visitor": "{\"scheme\":\"https\"}",
+            "content-type": "application/json",
+            "origin": "https://sanphukhoamauhong.com",
+            "priority": "u=1, i",
+            "referer": "https://sanphukhoamauhong.com/",
+            "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"Windows\"",
+            "sec-fetch-dest": "empty",
+            "sec-fetch-mode": "cors",
+            "sec-fetch-site": "cross-site",
+            "x-forwarded-for": "27.3.111.154, 172.70.196.134",
+            "x-forwarded-host": "7hnngdy7.rpcl.dev",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "6bd48b05c219",
+            "x-real-ip": "172.70.196.134"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "id": "1758507807444",
+            "question": "Chào"
+          },
+          "webhookUrl": "https://7hnngdy7.rpcl.dev/webhook/chat-bot",
+          "executionMode": "production"
+        }
+      }
+    ]
+  },
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "e7811751-48a0-4634-a8b8-07f25aa23ede",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "1a4961a59176d5fd864e9eb69e150a7df1eee10d7450116c18cb0ec2a61b8195"
+  },
+  "id": "8JHoZy4EyO9Mz32t",
+  "tags": []
+}

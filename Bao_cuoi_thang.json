@@ -1,0 +1,2521 @@
+{
+  "name": "Bao_cuoi_thang",
+  "nodes": [
+    {
+      "parameters": {
+        "inputDataFieldName": "sheet.pdf",
+        "driveId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "My Drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "1cX9IP-Jo6nPVwbM6Cb8Utkoyf8PBBr72",
+          "mode": "list",
+          "cachedResultName": "Bảng Công Từng Người",
+          "cachedResultUrl": "https://drive.google.com/drive/folders/1cX9IP-Jo6nPVwbM6Cb8Utkoyf8PBBr72"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        768,
+        464
+      ],
+      "id": "273afc9b-39f6-47ee-b8b3-404f5e87a992",
+      "name": "Upload file",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "GTDhLu3v0ToZQjrt",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "https://docs.google.com/spreadsheets/d/1zCJRHoMUzbBEsuwXTMp6i6L83-kcpyXcbnwUf0fshMw/export",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "format",
+              "value": "pdf"
+            },
+            {
+              "name": "gid",
+              "value": "668788943"
+            }
+          ]
+        },
+        "options": {
+          "redirect": {
+            "redirect": {}
+          },
+          "response": {
+            "response": {
+              "responseFormat": "file",
+              "outputPropertyName": "sheet.pdf"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        608,
+        464
+      ],
+      "id": "56cbc789-2b22-47da-a49d-fb45e9644c13",
+      "name": "Down Cham Cong Thao"
+    },
+    {
+      "parameters": {
+        "inputDataFieldName": "sheet.pdf",
+        "driveId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "My Drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "1cX9IP-Jo6nPVwbM6Cb8Utkoyf8PBBr72",
+          "mode": "list",
+          "cachedResultName": "Bảng Công Từng Người",
+          "cachedResultUrl": "https://drive.google.com/drive/folders/1cX9IP-Jo6nPVwbM6Cb8Utkoyf8PBBr72"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        768,
+        576
+      ],
+      "id": "f117739a-b045-4e4b-8d6e-2d8731f484b2",
+      "name": "Upload file1",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "GTDhLu3v0ToZQjrt",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "https://docs.google.com/spreadsheets/d/1zCJRHoMUzbBEsuwXTMp6i6L83-kcpyXcbnwUf0fshMw/export",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "format",
+              "value": "pdf"
+            },
+            {
+              "name": "gid",
+              "value": "530188842"
+            }
+          ]
+        },
+        "options": {
+          "redirect": {
+            "redirect": {}
+          },
+          "response": {
+            "response": {
+              "responseFormat": "file",
+              "outputPropertyName": "sheet.pdf"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        608,
+        576
+      ],
+      "id": "52c72a43-dc3c-4074-b979-340dce024d53",
+      "name": "Down Cham Cong Hà Bé"
+    },
+    {
+      "parameters": {
+        "inputDataFieldName": "sheet.pdf",
+        "driveId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "My Drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "1cX9IP-Jo6nPVwbM6Cb8Utkoyf8PBBr72",
+          "mode": "list",
+          "cachedResultName": "Bảng Công Từng Người",
+          "cachedResultUrl": "https://drive.google.com/drive/folders/1cX9IP-Jo6nPVwbM6Cb8Utkoyf8PBBr72"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        768,
+        688
+      ],
+      "id": "1036a3c2-1f72-43ea-b68c-ba4d7c0ced21",
+      "name": "Upload file2",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "GTDhLu3v0ToZQjrt",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "inputDataFieldName": "sheet.pdf",
+        "driveId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "My Drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "1cX9IP-Jo6nPVwbM6Cb8Utkoyf8PBBr72",
+          "mode": "list",
+          "cachedResultName": "Bảng Công Từng Người",
+          "cachedResultUrl": "https://drive.google.com/drive/folders/1cX9IP-Jo6nPVwbM6Cb8Utkoyf8PBBr72"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        768,
+        800
+      ],
+      "id": "8e817468-8b98-4a4d-a25e-f3b2b5be3618",
+      "name": "Upload file3",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "GTDhLu3v0ToZQjrt",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "inputDataFieldName": "sheet.pdf",
+        "driveId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "My Drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "1cX9IP-Jo6nPVwbM6Cb8Utkoyf8PBBr72",
+          "mode": "list",
+          "cachedResultName": "Bảng Công Từng Người",
+          "cachedResultUrl": "https://drive.google.com/drive/folders/1cX9IP-Jo6nPVwbM6Cb8Utkoyf8PBBr72"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        768,
+        928
+      ],
+      "id": "0ce2f544-3756-4f3d-b722-2f6092c41941",
+      "name": "Upload file4",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "GTDhLu3v0ToZQjrt",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "inputDataFieldName": "sheet.pdf",
+        "driveId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "My Drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "1cX9IP-Jo6nPVwbM6Cb8Utkoyf8PBBr72",
+          "mode": "list",
+          "cachedResultName": "Bảng Công Từng Người",
+          "cachedResultUrl": "https://drive.google.com/drive/folders/1cX9IP-Jo6nPVwbM6Cb8Utkoyf8PBBr72"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        768,
+        1056
+      ],
+      "id": "63529e55-015f-43c0-9cb6-bdcd8c230d9c",
+      "name": "Upload file5",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "GTDhLu3v0ToZQjrt",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "inputDataFieldName": "sheet.pdf",
+        "driveId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "My Drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "1cX9IP-Jo6nPVwbM6Cb8Utkoyf8PBBr72",
+          "mode": "list",
+          "cachedResultName": "Bảng Công Từng Người",
+          "cachedResultUrl": "https://drive.google.com/drive/folders/1cX9IP-Jo6nPVwbM6Cb8Utkoyf8PBBr72"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        768,
+        1184
+      ],
+      "id": "798f79ad-3d33-4e28-8ee4-915892474f06",
+      "name": "Upload file6",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "GTDhLu3v0ToZQjrt",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "https://docs.google.com/spreadsheets/d/1zCJRHoMUzbBEsuwXTMp6i6L83-kcpyXcbnwUf0fshMw/export",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "format",
+              "value": "pdf"
+            },
+            {
+              "name": "gid",
+              "value": "1114311930"
+            }
+          ]
+        },
+        "options": {
+          "redirect": {
+            "redirect": {}
+          },
+          "response": {
+            "response": {
+              "responseFormat": "file",
+              "outputPropertyName": "sheet.pdf"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        608,
+        800
+      ],
+      "id": "89146ec7-60be-40e0-89f5-9bd75f25dd4e",
+      "name": "Phương Anh"
+    },
+    {
+      "parameters": {
+        "url": "https://docs.google.com/spreadsheets/d/1zCJRHoMUzbBEsuwXTMp6i6L83-kcpyXcbnwUf0fshMw/export",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "format",
+              "value": "pdf"
+            },
+            {
+              "name": "gid",
+              "value": "1672845354"
+            }
+          ]
+        },
+        "options": {
+          "redirect": {
+            "redirect": {}
+          },
+          "response": {
+            "response": {
+              "responseFormat": "file",
+              "outputPropertyName": "sheet.pdf"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        608,
+        928
+      ],
+      "id": "c01727de-d38b-45cd-8ac0-547d40ba2bd2",
+      "name": "Lan"
+    },
+    {
+      "parameters": {
+        "url": "https://docs.google.com/spreadsheets/d/1zCJRHoMUzbBEsuwXTMp6i6L83-kcpyXcbnwUf0fshMw/export",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "format",
+              "value": "pdf"
+            },
+            {
+              "name": "gid",
+              "value": "226630437"
+            }
+          ]
+        },
+        "options": {
+          "redirect": {
+            "redirect": {}
+          },
+          "response": {
+            "response": {
+              "responseFormat": "file",
+              "outputPropertyName": "sheet.pdf"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        608,
+        688
+      ],
+      "id": "9b4a7500-e381-41c5-8f81-c4e0fe23ef1c",
+      "name": "Lan Anh"
+    },
+    {
+      "parameters": {
+        "url": "https://docs.google.com/spreadsheets/d/1zCJRHoMUzbBEsuwXTMp6i6L83-kcpyXcbnwUf0fshMw/export",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "format",
+              "value": "pdf"
+            },
+            {
+              "name": "gid",
+              "value": "1436054928"
+            }
+          ]
+        },
+        "options": {
+          "redirect": {
+            "redirect": {}
+          },
+          "response": {
+            "response": {
+              "responseFormat": "file",
+              "outputPropertyName": "sheet.pdf"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        608,
+        1056
+      ],
+      "id": "b86cc5ca-b1be-46b0-8f42-91f87b7dedfd",
+      "name": "Hà Lớn"
+    },
+    {
+      "parameters": {
+        "url": "https://docs.google.com/spreadsheets/d/1zCJRHoMUzbBEsuwXTMp6i6L83-kcpyXcbnwUf0fshMw/export",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "format",
+              "value": "pdf"
+            },
+            {
+              "name": "gid",
+              "value": "673680826"
+            }
+          ]
+        },
+        "options": {
+          "redirect": {
+            "redirect": {}
+          },
+          "response": {
+            "response": {
+              "responseFormat": "file",
+              "outputPropertyName": "sheet.pdf"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        608,
+        1184
+      ],
+      "id": "f34b5b1e-34e6-4ca4-83dd-78653085430b",
+      "name": "Thư"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 30 11 * * *"
+            }
+          ]
+        }
+      },
+      "id": "100e095f-7d1e-4b93-aa95-37ca8d7b121d",
+      "name": "Schedule Trigger1",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1,
+      "position": [
+        32,
+        688
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const item = items[0].json;\n\n// Lấy dữ liệu từ input\nconst year = parseInt(item[\"Year\"]);\nlet month;\n\n// Nếu \"Month\" là chữ (ví dụ \"September\") thì convert sang số\nif (isNaN(item[\"Month\"])) {\n  month = new Date(Date.parse(item[\"Month\"] + \" 1, \" + year)).getMonth() + 1;\n} else {\n  month = parseInt(item[\"Month\"]);\n}\n\nconst day = parseInt(item[\"Day of month\"]);\n\n// Tính ngày cuối tháng\nconst lastDay = new Date(year, month, 0).getDate();\n\n// Trả về cùng với kết quả check\nreturn [\n  {\n    json: {\n      ...item,\n      lastDay,\n      run: day === lastDay\n    }\n  }\n];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        208,
+        688
+      ],
+      "id": "f3fb2619-205d-486f-b87f-21ce60a6117b",
+      "name": "Check last day"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "03a7f3e8-d1bb-43c4-a62b-2dfb59ad0cb5",
+              "leftValue": "={{ $json.run }}",
+              "rightValue": "={{true}}",
+              "operator": {
+                "type": "boolean",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        208,
+        896
+      ],
+      "id": "6bc56835-d99b-4023-881e-0b4722e440be",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.name }}",
+                    "rightValue": "THẢO",
+                    "operator": {
+                      "type": "string",
+                      "operation": "contains"
+                    },
+                    "id": "d035e289-0cfc-4484-a9db-ed382de602fc"
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "2a9bb8a0-501e-4cfd-87c7-3c1efbb94260",
+                    "leftValue": "={{ $json.name }}",
+                    "rightValue": "HÀ (BÉ)",
+                    "operator": {
+                      "type": "string",
+                      "operation": "contains"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "5e229795-4267-424f-bd8a-29411dfbbc03",
+                    "leftValue": "={{ $json.name }}",
+                    "rightValue": "PHƯƠNG ANH",
+                    "operator": {
+                      "type": "string",
+                      "operation": "contains"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "942e14de-6f9e-47ae-b830-4aaa907e7dbd",
+                    "leftValue": "={{ $json.name }}",
+                    "rightValue": "HÀ (LỚN)",
+                    "operator": {
+                      "type": "string",
+                      "operation": "contains"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "d35a9325-11e5-4b01-9e0d-29765904ca92",
+                    "leftValue": "={{ $json.name }}",
+                    "rightValue": "THƯ",
+                    "operator": {
+                      "type": "string",
+                      "operation": "contains"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "fab7e97c-61bb-4a85-9d54-af2cfe82d036",
+                    "leftValue": "={{ $json.name }}",
+                    "rightValue": "DATA-CHAM-CONG - LAN.pdf",
+                    "operator": {
+                      "type": "string",
+                      "operation": "contains"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "2ecd44a8-dc76-443d-897f-07b4b2570a5d",
+                    "leftValue": "={{ $json.name }}",
+                    "rightValue": "LAN ANH",
+                    "operator": {
+                      "type": "string",
+                      "operation": "contains"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        416,
+        1952
+      ],
+      "id": "1daca746-e68c-4779-9a38-b4f6f75936ed",
+      "name": "Switch"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Lấy dữ liệu từ input\nreturn items.map(item => {\n  const id = item.json.id;\n  const name = item.json.name;\n\n  return {\n    json: {\n      id,\n      name,\n      webViewLink: `https://drive.google.com/file/d/${id}/view?usp=sharing`\n    }\n  };\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        784,
+        1440
+      ],
+      "id": "4d325602-34fa-4d10-94bd-fef5de05bdbe",
+      "name": "Ghep Link"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Lấy dữ liệu từ input\nreturn items.map(item => {\n  const id = item.json.id;\n  const name = item.json.name;\n\n  return {\n    json: {\n      id,\n      name,\n      webViewLink: `https://drive.google.com/file/d/${id}/view?usp=sharing`\n    }\n  };\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        784,
+        1616
+      ],
+      "id": "69d76996-0b9a-4d5b-a86c-9e83174652fe",
+      "name": "Ghep Link1"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Lấy dữ liệu từ input\nreturn items.map(item => {\n  const id = item.json.id;\n  const name = item.json.name;\n\n  return {\n    json: {\n      id,\n      name,\n      webViewLink: `https://drive.google.com/file/d/${id}/view?usp=sharing`\n    }\n  };\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        800,
+        1792
+      ],
+      "id": "429126a7-6a37-4874-9bc4-d2f937df1cd6",
+      "name": "Ghep Link2"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Lấy dữ liệu từ input\nreturn items.map(item => {\n  const id = item.json.id;\n  const name = item.json.name;\n\n  return {\n    json: {\n      id,\n      name,\n      webViewLink: `https://drive.google.com/file/d/${id}/view?usp=sharing`\n    }\n  };\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        800,
+        1968
+      ],
+      "id": "0ecad7c2-5a9f-4b8c-be64-6c22ead207e3",
+      "name": "Ghep Link3"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Lấy dữ liệu từ input\nreturn items.map(item => {\n  const id = item.json.id;\n  const name = item.json.name;\n\n  return {\n    json: {\n      id,\n      name,\n      webViewLink: `https://drive.google.com/file/d/${id}/view?usp=sharing`\n    }\n  };\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        816,
+        2160
+      ],
+      "id": "26019da0-f062-4dc5-affe-984b0c00f62d",
+      "name": "Ghep Link4"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Lấy dữ liệu từ input\nreturn items.map(item => {\n  const id = item.json.id;\n  const name = item.json.name;\n\n  return {\n    json: {\n      id,\n      name,\n      webViewLink: `https://drive.google.com/file/d/${id}/view?usp=sharing`\n    }\n  };\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        816,
+        2368
+      ],
+      "id": "f0be0806-456c-4c78-9ebb-b776349d9799",
+      "name": "Ghep Link5"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Lấy dữ liệu từ input\nreturn items.map(item => {\n  const id = item.json.id;\n  const name = item.json.name;\n\n  return {\n    json: {\n      id,\n      name,\n      webViewLink: `https://drive.google.com/file/d/${id}/view?usp=sharing`\n    }\n  };\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        816,
+        2560
+      ],
+      "id": "0111b10f-331c-4b15-a833-efd7731de13c",
+      "name": "Ghep Link6"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://bot-api.zapps.me/bot2597159352573319382:lulppyLFgNoinVzTFsuwZXnUCZUVNBFDJtclvrHBruuvMspobLKQzymKbvCUNDzY/sendMessage",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "chat_id",
+              "value": "=b2d44a9fefd3068d5fc2"
+            },
+            {
+              "name": "text",
+              "value": "=Hi, bảng công tháng trước đây ạ🌾\n___________\nXem ở link này\n👇👇👇\n{{ $json.webViewLink }}\n___________\n🔸Nếu có sai sót gì hãy báo lại với \"Chị Chang\" nhé\n\nCảm ơn! 🌻"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        960,
+        1440
+      ],
+      "id": "69456bbd-b2c0-42ec-ac13-a7c91d9d1d5a",
+      "name": "THẢO"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://bot-api.zapps.me/bot2597159352573319382:lulppyLFgNoinVzTFsuwZXnUCZUVNBFDJtclvrHBruuvMspobLKQzymKbvCUNDzY/sendMessage",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "chat_id",
+              "value": "=9b9f6a16105df903a04c"
+            },
+            {
+              "name": "text",
+              "value": "=Hi, bảng công tháng trước đây ạ🌾\n___________\nXem ở link này\n👇👇👇\n{{ $json.webViewLink }}\n___________\n🔸Nếu có sai sót gì hãy báo lại với \"Chị Chang\" nhé\n\nCảm ơn! 🌻"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        960,
+        1616
+      ],
+      "id": "c19cfbfa-6266-4284-956c-9e501b2d8a2e",
+      "name": "HÀ (BÉ)"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://bot-api.zapps.me/bot2597159352573319382:lulppyLFgNoinVzTFsuwZXnUCZUVNBFDJtclvrHBruuvMspobLKQzymKbvCUNDzY/sendMessage",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "chat_id",
+              "value": "=6178b7bfb1eb58b501fa"
+            },
+            {
+              "name": "text",
+              "value": "=Hi, bảng công tháng trước đây ạ🌾\n___________\nXem ở link này\n👇👇👇\n{{ $json.webViewLink }}\n___________\n🔸Nếu có sai sót gì hãy báo lại với \"Chị Chang\" nhé\n\nCảm ơn! 🌻"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        976,
+        1792
+      ],
+      "id": "2ac50521-d44d-43c7-93a3-b8b68cff868b",
+      "name": "PHƯƠNG ANH"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://bot-api.zapps.me/bot2597159352573319382:lulppyLFgNoinVzTFsuwZXnUCZUVNBFDJtclvrHBruuvMspobLKQzymKbvCUNDzY/sendMessage",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "chat_id",
+              "value": "=93371a86a9c5409b19d4"
+            },
+            {
+              "name": "text",
+              "value": "=Hi, bảng công tháng trước đây ạ🌾\n___________\nXem ở link này\n👇👇👇\n{{ $json.webViewLink }}\n___________\n🔸Nếu có sai sót gì hãy báo lại với \"Chị Chang\" nhé\n\nCảm ơn! 🌻"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        976,
+        1968
+      ],
+      "id": "becd5029-aeb0-437e-a61c-2427d3c01b22",
+      "name": "HÀ (LỚN)"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://bot-api.zapps.me/bot2597159352573319382:lulppyLFgNoinVzTFsuwZXnUCZUVNBFDJtclvrHBruuvMspobLKQzymKbvCUNDzY/sendMessage",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "chat_id",
+              "value": "=5b313d673630df6e8621"
+            },
+            {
+              "name": "text",
+              "value": "=Hi, bảng công tháng trước đây ạ🌾\n___________\nXem ở link này\n👇👇👇\n{{ $json.webViewLink }}\n___________\n🔸Nếu có sai sót gì hãy báo lại với \"Chị Chang\" nhé\n\nCảm ơn! 🌻"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        992,
+        2160
+      ],
+      "id": "7b072705-b009-423f-ba7d-027fbc94f887",
+      "name": "THƯ"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://bot-api.zapps.me/bot2597159352573319382:lulppyLFgNoinVzTFsuwZXnUCZUVNBFDJtclvrHBruuvMspobLKQzymKbvCUNDzY/sendMessage",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "chat_id",
+              "value": "=c1dad820ab6b42351b7a"
+            },
+            {
+              "name": "text",
+              "value": "=Hi, bảng công tháng trước đây ạ🌾\n___________\nXem ở link này\n👇👇👇\n{{ $json.webViewLink }}\n___________\n🔸Nếu có sai sót gì hãy báo lại với \"Chị Chang\" nhé\n\nCảm ơn! 🌻"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        992,
+        2368
+      ],
+      "id": "8c283134-d5e8-48a5-8a5a-e38cb124bf3f",
+      "name": "LAN"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://bot-api.zapps.me/bot2597159352573319382:lulppyLFgNoinVzTFsuwZXnUCZUVNBFDJtclvrHBruuvMspobLKQzymKbvCUNDzY/sendMessage",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "chat_id",
+              "value": "=c870e9651a29f377aa38"
+            },
+            {
+              "name": "text",
+              "value": "=Hi, bảng công tháng trước đây ạ🌾\n___________\nXem ở link này\n👇👇👇\n{{ $json.webViewLink }}\n___________\n🔸Nếu có sai sót gì hãy báo lại với \"Chị Chang\" nhé\n\nCảm ơn! 🌻"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        992,
+        2560
+      ],
+      "id": "86aca23f-2bf1-4732-8ee0-5bdabdd87096",
+      "name": "LAN ANH"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 0 22 1 * *"
+            }
+          ]
+        }
+      },
+      "id": "bd20a9b4-919b-41ad-a7b2-c6876a359a41",
+      "name": "9h sáng mùng 2 mỗi tháng1",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1,
+      "position": [
+        1472,
+        656
+      ]
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1zCJRHoMUzbBEsuwXTMp6i6L83-kcpyXcbnwUf0fshMw",
+          "mode": "list",
+          "cachedResultName": "DATA-CHAM-CONG",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1zCJRHoMUzbBEsuwXTMp6i6L83-kcpyXcbnwUf0fshMw/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 668788943,
+          "mode": "list",
+          "cachedResultName": "THẢO",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1zCJRHoMUzbBEsuwXTMp6i6L83-kcpyXcbnwUf0fshMw/edit#gid=668788943"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        1760,
+        528
+      ],
+      "id": "36501510-b0d5-47f4-88d2-3cf5024b47e9",
+      "name": "Thảo",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "RKhU2jItzkOVzxAZ",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## Tải file của từng người vào mỗi cuối tháng",
+        "height": 928,
+        "width": 1376,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -96,
+        416
+      ],
+      "id": "84b21abd-6d2b-43b9-8e00-e9c39aa951dc",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "content": "## Nhắn cho mọi người đầu tháng\n",
+        "height": 1376,
+        "width": 1536,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -96,
+        1376
+      ],
+      "id": "e43bffdc-c6fb-4745-aae7-36d790c20a00",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://bot-api.zapps.me/bot2597159352573319382:lulppyLFgNoinVzTFsuwZXnUCZUVNBFDJtclvrHBruuvMspobLKQzymKbvCUNDzY/sendMessage",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "chat_id",
+              "value": "=681a8dad81e568bb31f4"
+            },
+            {
+              "name": "text",
+              "value": "={{ $json.message }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1664,
+        1440
+      ],
+      "id": "f809c8d8-42a9-4895-b1ff-b376a8808a94",
+      "name": "ZL Xu-Xu"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 0 21 * * *"
+            }
+          ]
+        }
+      },
+      "id": "b9e51098-4ea7-48de-97e1-7892bddec85b",
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1,
+      "position": [
+        16,
+        1984
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const item = items[0].json;\n\n// Lấy dữ liệu từ input\nconst year = parseInt(item[\"Year\"]);\nlet month;\n\n// Nếu \"Month\" là chữ (ví dụ \"September\") thì convert sang số\nif (isNaN(item[\"Month\"])) {\n  month = new Date(Date.parse(item[\"Month\"] + \" 1, \" + year)).getMonth() + 1;\n} else {\n  month = parseInt(item[\"Month\"]);\n}\n\nconst day = parseInt(item[\"Day of month\"]);\n\n// Tính ngày cuối tháng\nconst lastDay = new Date(year, month, 0).getDate();\n\n// Trả về cùng với kết quả check\nreturn [\n  {\n    json: {\n      ...item,\n      lastDay,\n      run: day === lastDay\n    }\n  }\n];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        192,
+        1984
+      ],
+      "id": "7b93a8f7-c178-4a4a-a092-a83035418a81",
+      "name": "Check last day1"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "03a7f3e8-d1bb-43c4-a62b-2dfb59ad0cb5",
+              "leftValue": "={{ $json.run }}",
+              "rightValue": "={{true}}",
+              "operator": {
+                "type": "boolean",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        0,
+        2224
+      ],
+      "id": "64efc5dd-f83d-45d6-95f1-a7061bddff10",
+      "name": "If1"
+    },
+    {
+      "parameters": {
+        "resource": "fileFolder",
+        "queryString": ".pdf",
+        "filter": {
+          "folderId": {
+            "__rl": true,
+            "value": "1cX9IP-Jo6nPVwbM6Cb8Utkoyf8PBBr72",
+            "mode": "list",
+            "cachedResultName": "Bảng Công Từng Người",
+            "cachedResultUrl": "https://drive.google.com/drive/folders/1cX9IP-Jo6nPVwbM6Cb8Utkoyf8PBBr72"
+          }
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        224,
+        2208
+      ],
+      "id": "7c334fd0-11a1-4c2e-8917-adc1b8c23ccf",
+      "name": "Search files and folders",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "GTDhLu3v0ToZQjrt",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 0 22 1 * *"
+            }
+          ]
+        }
+      },
+      "id": "e1ac3266-9845-4aea-b565-e5df6056c06d",
+      "name": "9h sáng mùng 2 mỗi tháng",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1,
+      "position": [
+        -848,
+        2000
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.name }}",
+                    "rightValue": "THẢO",
+                    "operator": {
+                      "type": "string",
+                      "operation": "contains"
+                    },
+                    "id": "d035e289-0cfc-4484-a9db-ed382de602fc"
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "2a9bb8a0-501e-4cfd-87c7-3c1efbb94260",
+                    "leftValue": "={{ $json.name }}",
+                    "rightValue": "HÀ (BÉ)",
+                    "operator": {
+                      "type": "string",
+                      "operation": "contains"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "5e229795-4267-424f-bd8a-29411dfbbc03",
+                    "leftValue": "={{ $json.name }}",
+                    "rightValue": "PHƯƠNG ANH",
+                    "operator": {
+                      "type": "string",
+                      "operation": "contains"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "942e14de-6f9e-47ae-b830-4aaa907e7dbd",
+                    "leftValue": "={{ $json.name }}",
+                    "rightValue": "HÀ (LỚN)",
+                    "operator": {
+                      "type": "string",
+                      "operation": "contains"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "d35a9325-11e5-4b01-9e0d-29765904ca92",
+                    "leftValue": "={{ $json.name }}",
+                    "rightValue": "THƯ",
+                    "operator": {
+                      "type": "string",
+                      "operation": "contains"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "fab7e97c-61bb-4a85-9d54-af2cfe82d036",
+                    "leftValue": "={{ $json.name }}",
+                    "rightValue": "DATA-CHAM-CONG - LAN.pdf",
+                    "operator": {
+                      "type": "string",
+                      "operation": "contains"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "2ecd44a8-dc76-443d-897f-07b4b2570a5d",
+                    "leftValue": "={{ $json.name }}",
+                    "rightValue": "LAN ANH",
+                    "operator": {
+                      "type": "string",
+                      "operation": "contains"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        448,
+        3552
+      ],
+      "id": "ff36f6e7-8f28-44af-a430-3e76dcbef31b",
+      "name": "Switch1"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Lấy dữ liệu từ input\nreturn items.map(item => {\n  const id = item.json.id;\n  const name = item.json.name;\n\n  return {\n    json: {\n      id,\n      name,\n      webViewLink: `https://drive.google.com/file/d/${id}/view?usp=sharing`\n    }\n  };\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        816,
+        3040
+      ],
+      "id": "aefcca53-e6c5-47c6-8093-012443736a7f",
+      "name": "Ghep Link7"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Lấy dữ liệu từ input\nreturn items.map(item => {\n  const id = item.json.id;\n  const name = item.json.name;\n\n  return {\n    json: {\n      id,\n      name,\n      webViewLink: `https://drive.google.com/file/d/${id}/view?usp=sharing`\n    }\n  };\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        816,
+        3216
+      ],
+      "id": "01f10ca9-6879-4ccb-99fb-b52418f6253b",
+      "name": "Ghep Link8"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Lấy dữ liệu từ input\nreturn items.map(item => {\n  const id = item.json.id;\n  const name = item.json.name;\n\n  return {\n    json: {\n      id,\n      name,\n      webViewLink: `https://drive.google.com/file/d/${id}/view?usp=sharing`\n    }\n  };\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        832,
+        3392
+      ],
+      "id": "d4397dc5-5991-421c-be17-aa327828324b",
+      "name": "Ghep Link9"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Lấy dữ liệu từ input\nreturn items.map(item => {\n  const id = item.json.id;\n  const name = item.json.name;\n\n  return {\n    json: {\n      id,\n      name,\n      webViewLink: `https://drive.google.com/file/d/${id}/view?usp=sharing`\n    }\n  };\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        832,
+        3568
+      ],
+      "id": "3d0f3e6d-bd96-4279-b994-de3e18d96fd8",
+      "name": "Ghep Link10"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Lấy dữ liệu từ input\nreturn items.map(item => {\n  const id = item.json.id;\n  const name = item.json.name;\n\n  return {\n    json: {\n      id,\n      name,\n      webViewLink: `https://drive.google.com/file/d/${id}/view?usp=sharing`\n    }\n  };\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        848,
+        3760
+      ],
+      "id": "0768c1f5-4ba0-43bf-a014-e7528f7bd2d9",
+      "name": "Ghep Link11"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Lấy dữ liệu từ input\nreturn items.map(item => {\n  const id = item.json.id;\n  const name = item.json.name;\n\n  return {\n    json: {\n      id,\n      name,\n      webViewLink: `https://drive.google.com/file/d/${id}/view?usp=sharing`\n    }\n  };\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        848,
+        3968
+      ],
+      "id": "c3f1b770-3a49-4364-ab3d-706728ec4011",
+      "name": "Ghep Link12"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Lấy dữ liệu từ input\nreturn items.map(item => {\n  const id = item.json.id;\n  const name = item.json.name;\n\n  return {\n    json: {\n      id,\n      name,\n      webViewLink: `https://drive.google.com/file/d/${id}/view?usp=sharing`\n    }\n  };\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        848,
+        4160
+      ],
+      "id": "2c404cd7-9a2f-4a08-ab17-a897940f402c",
+      "name": "Ghep Link13"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://bot-api.zapps.me/bot2597159352573319382:lulppyLFgNoinVzTFsuwZXnUCZUVNBFDJtclvrHBruuvMspobLKQzymKbvCUNDzY/sendMessage",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "chat_id",
+              "value": "=681a8dad81e568bb31f4"
+            },
+            {
+              "name": "text",
+              "value": "=Thảo\n-----------\n{{ $json.webViewLink }}\n-----------"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        992,
+        3040
+      ],
+      "id": "07a58e53-7ec3-4058-ba64-9bcb08391153",
+      "name": "THẢO1"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://bot-api.zapps.me/bot2597159352573319382:lulppyLFgNoinVzTFsuwZXnUCZUVNBFDJtclvrHBruuvMspobLKQzymKbvCUNDzY/sendMessage",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "chat_id",
+              "value": "=681a8dad81e568bb31f4"
+            },
+            {
+              "name": "text",
+              "value": "=Hà (Bé)\n-----------\n{{ $json.webViewLink }}\n-----------"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        992,
+        3216
+      ],
+      "id": "8dc58508-8552-4c47-82cd-4fd21b0df47a",
+      "name": "HÀ (BÉ)1"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://bot-api.zapps.me/bot2597159352573319382:lulppyLFgNoinVzTFsuwZXnUCZUVNBFDJtclvrHBruuvMspobLKQzymKbvCUNDzY/sendMessage",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "chat_id",
+              "value": "=681a8dad81e568bb31f4"
+            },
+            {
+              "name": "text",
+              "value": "=Phương Anh\n-----------\n{{ $json.webViewLink }}\n-----------"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1008,
+        3392
+      ],
+      "id": "41612831-e813-4cf3-a4e4-fe4a5035ed97",
+      "name": "PHƯƠNG ANH1"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://bot-api.zapps.me/bot2597159352573319382:lulppyLFgNoinVzTFsuwZXnUCZUVNBFDJtclvrHBruuvMspobLKQzymKbvCUNDzY/sendMessage",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "chat_id",
+              "value": "=681a8dad81e568bb31f4"
+            },
+            {
+              "name": "text",
+              "value": "=Hà (Lớn)\n-----------\n{{ $json.webViewLink }}\n-----------"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1008,
+        3568
+      ],
+      "id": "de483036-9348-4a35-8d1b-738ca562556a",
+      "name": "HÀ (LỚN)1"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://bot-api.zapps.me/bot2597159352573319382:lulppyLFgNoinVzTFsuwZXnUCZUVNBFDJtclvrHBruuvMspobLKQzymKbvCUNDzY/sendMessage",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "chat_id",
+              "value": "=681a8dad81e568bb31f4"
+            },
+            {
+              "name": "text",
+              "value": "=Thư\n-----------\n{{ $json.webViewLink }}\n-----------"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1024,
+        3760
+      ],
+      "id": "bfe0d1fb-4b85-49c1-a545-1354a6fcd823",
+      "name": "THƯ1"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://bot-api.zapps.me/bot2597159352573319382:lulppyLFgNoinVzTFsuwZXnUCZUVNBFDJtclvrHBruuvMspobLKQzymKbvCUNDzY/sendMessage",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "chat_id",
+              "value": "=681a8dad81e568bb31f4"
+            },
+            {
+              "name": "text",
+              "value": "=Lan Anh\n-----------\n{{ $json.webViewLink }}\n-----------"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1024,
+        4160
+      ],
+      "id": "51209346-bc06-43f8-afa3-c37a88440b9b",
+      "name": "LAN ANH1"
+    },
+    {
+      "parameters": {
+        "content": "## 681a8dad81e568bb31f4\n",
+        "height": 1376,
+        "width": 1376,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -64,
+        2992
+      ],
+      "id": "d2cd1f12-15aa-4f88-9d63-c79626869afe",
+      "name": "Sticky Note2"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 0 21 * * *"
+            }
+          ]
+        }
+      },
+      "id": "5426a5a5-bd83-49af-8870-855f90647ffc",
+      "name": "Schedule Trigger2",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1,
+      "position": [
+        48,
+        3584
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const item = items[0].json;\n\n// Lấy dữ liệu từ input\nconst year = parseInt(item[\"Year\"]);\nlet month;\n\n// Nếu \"Month\" là chữ (ví dụ \"September\") thì convert sang số\nif (isNaN(item[\"Month\"])) {\n  month = new Date(Date.parse(item[\"Month\"] + \" 1, \" + year)).getMonth() + 1;\n} else {\n  month = parseInt(item[\"Month\"]);\n}\n\nconst day = parseInt(item[\"Day of month\"]);\n\n// Tính ngày cuối tháng\nconst lastDay = new Date(year, month, 0).getDate();\n\n// Trả về cùng với kết quả check\nreturn [\n  {\n    json: {\n      ...item,\n      lastDay,\n      run: day === lastDay\n    }\n  }\n];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        224,
+        3584
+      ],
+      "id": "a7250f1f-0873-47ce-a8b8-e3e3a2ff0a82",
+      "name": "Check last day2"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "03a7f3e8-d1bb-43c4-a62b-2dfb59ad0cb5",
+              "leftValue": "={{ $json.run }}",
+              "rightValue": "={{true}}",
+              "operator": {
+                "type": "boolean",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        32,
+        3824
+      ],
+      "id": "2c6c0bc8-f2f8-4772-84df-7ed9c50b7263",
+      "name": "If2"
+    },
+    {
+      "parameters": {
+        "resource": "fileFolder",
+        "queryString": ".pdf",
+        "filter": {
+          "folderId": {
+            "__rl": true,
+            "value": "1cX9IP-Jo6nPVwbM6Cb8Utkoyf8PBBr72",
+            "mode": "list",
+            "cachedResultName": "Bảng Công Từng Người",
+            "cachedResultUrl": "https://drive.google.com/drive/folders/1cX9IP-Jo6nPVwbM6Cb8Utkoyf8PBBr72"
+          }
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        256,
+        3808
+      ],
+      "id": "638ba0a5-c0dc-4486-bcb1-fd14c7efc3cc",
+      "name": "Search files and folders1",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "GTDhLu3v0ToZQjrt",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://bot-api.zapps.me/bot2597159352573319382:lulppyLFgNoinVzTFsuwZXnUCZUVNBFDJtclvrHBruuvMspobLKQzymKbvCUNDzY/sendMessage",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "chat_id",
+              "value": "=74c2639d3ecfd7918ede"
+            },
+            {
+              "name": "text",
+              "value": "=Hi, bảng công tháng trước đây ạ🌾\n___________\nXem ở link này\n👇👇👇\n{{ $('Ghep Link').item.json.webViewLink }}\n___________\n🔸Nếu có sai sót gì hãy báo lại với \"Chị Chang\" nhé\n\nCảm ơn! 🌻"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1232,
+        1440
+      ],
+      "id": "af1e7414-859e-4c20-83fb-0b6f87e05528",
+      "name": "Nhắn ZL CHO HA"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {}
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        336,
+        784
+      ],
+      "id": "d5f17158-1f09-45b6-966e-f1ebefb5454e",
+      "name": "Schedule Trigger3"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://bot-api.zapps.me/bot2597159352573319382:lulppyLFgNoinVzTFsuwZXnUCZUVNBFDJtclvrHBruuvMspobLKQzymKbvCUNDzY/sendMessage",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "chat_id",
+              "value": "=74c2639d3ecfd7918ede"
+            },
+            {
+              "name": "text",
+              "value": "=Gửi hết"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1200,
+        2560
+      ],
+      "id": "7923351d-f193-403f-a068-ef252e3d7dc4",
+      "name": "Nhắn ZL CHO HA1"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://bot-api.zapps.me/bot2597159352573319382:lulppyLFgNoinVzTFsuwZXnUCZUVNBFDJtclvrHBruuvMspobLKQzymKbvCUNDzY/sendMessage",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "chat_id",
+              "value": "=681a8dad81e568bb31f4"
+            },
+            {
+              "name": "text",
+              "value": "=Lan\n-----------\n{{ $json.webViewLink }}\n-----------"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1104,
+        3984
+      ],
+      "id": "9512970d-c957-4db5-a72b-c18f29bc1a1c",
+      "name": "Lan1"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://bot-api.zapps.me/bot2597159352573319382:lulppyLFgNoinVzTFsuwZXnUCZUVNBFDJtclvrHBruuvMspobLKQzymKbvCUNDzY/sendMessage",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "chat_id",
+              "value": "=74c2639d3ecfd7918ede"
+            },
+            {
+              "name": "text",
+              "value": "=Hi, bảng công tháng trước đây ạ🌾\n___________\nXem ở link này\n👇👇👇\n{{ $('Ghep Link3').item.json.webViewLink }}\n___________\n🔸Nếu có sai sót gì hãy báo lại với \"Chị Chang\" nhé\n\nCảm ơn! 🌻"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1200,
+        1968
+      ],
+      "id": "1ee02a95-3cb7-4158-b4ce-dc271d2732a0",
+      "name": "Nhắn ZL CHO HA2"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://bot-api.zapps.me/bot2597159352573319382:lulppyLFgNoinVzTFsuwZXnUCZUVNBFDJtclvrHBruuvMspobLKQzymKbvCUNDzY/sendMessage",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "chat_id",
+              "value": "=74c2639d3ecfd7918ede"
+            },
+            {
+              "name": "text",
+              "value": "=Hi, bảng công tháng trước đây ạ🌾\n___________\nXem ở link này\n👇👇👇\n{{ $('Ghep Link2').item.json.webViewLink }}\n___________\n🔸Nếu có sai sót gì hãy báo lại với \"Chị Chang\" nhé\n\nCảm ơn! 🌻"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1200,
+        1792
+      ],
+      "id": "006ebb4f-eeaa-4bdf-8ef2-bf4c2bf8d2b8",
+      "name": "Nhắn ZL CHO HA3"
+    }
+  ],
+  "pinData": {
+    "Schedule Trigger1": [
+      {
+        "json": {
+          "timestamp": "2025-09-28T11:30:00.027-04:00",
+          "Readable date": "September 28th 2025, 11:30:00 am",
+          "Readable time": "11:30:00 am",
+          "Day of week": "Sunday",
+          "Year": "2025",
+          "Month": "September",
+          "Day of month": "28",
+          "Hour": "11",
+          "Minute": "30",
+          "Second": "00",
+          "Timezone": "America/New_York (UTC-04:00)"
+        }
+      }
+    ]
+  },
+  "connections": {
+    "Down Cham Cong Thao": {
+      "main": [
+        [
+          {
+            "node": "Upload file",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Down Cham Cong Hà Bé": {
+      "main": [
+        [
+          {
+            "node": "Upload file1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Phương Anh": {
+      "main": [
+        [
+          {
+            "node": "Upload file3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lan": {
+      "main": [
+        [
+          {
+            "node": "Upload file4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lan Anh": {
+      "main": [
+        [
+          {
+            "node": "Upload file2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Hà Lớn": {
+      "main": [
+        [
+          {
+            "node": "Upload file5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Thư": {
+      "main": [
+        [
+          {
+            "node": "Upload file6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger1": {
+      "main": [
+        [
+          {
+            "node": "Check last day",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check last day": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Down Cham Cong Hà Bé",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Lan Anh",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Phương Anh",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Lan",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Hà Lớn",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Thư",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Down Cham Cong Thao",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "Ghep Link",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Ghep Link1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Ghep Link2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Ghep Link3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Ghep Link4",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Ghep Link5",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Ghep Link6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ghep Link": {
+      "main": [
+        [
+          {
+            "node": "THẢO",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ghep Link1": {
+      "main": [
+        [
+          {
+            "node": "HÀ (BÉ)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ghep Link2": {
+      "main": [
+        [
+          {
+            "node": "PHƯƠNG ANH",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ghep Link3": {
+      "main": [
+        [
+          {
+            "node": "HÀ (LỚN)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ghep Link4": {
+      "main": [
+        [
+          {
+            "node": "THƯ",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ghep Link5": {
+      "main": [
+        [
+          {
+            "node": "LAN",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ghep Link6": {
+      "main": [
+        [
+          {
+            "node": "LAN ANH",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "THẢO": {
+      "main": [
+        [
+          {
+            "node": "Nhắn ZL CHO HA",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "9h sáng mùng 2 mỗi tháng1": {
+      "main": [
+        [
+          {
+            "node": "Thảo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Check last day1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check last day1": {
+      "main": [
+        [
+          {
+            "node": "If1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If1": {
+      "main": [
+        [
+          {
+            "node": "Search files and folders",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "9h sáng mùng 2 mỗi tháng": {
+      "main": [
+        []
+      ]
+    },
+    "Search files and folders": {
+      "main": [
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch1": {
+      "main": [
+        [
+          {
+            "node": "Ghep Link7",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Ghep Link8",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Ghep Link9",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Ghep Link10",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Ghep Link11",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Ghep Link12",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Ghep Link13",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ghep Link7": {
+      "main": [
+        [
+          {
+            "node": "THẢO1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ghep Link8": {
+      "main": [
+        [
+          {
+            "node": "HÀ (BÉ)1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ghep Link9": {
+      "main": [
+        [
+          {
+            "node": "PHƯƠNG ANH1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ghep Link10": {
+      "main": [
+        [
+          {
+            "node": "HÀ (LỚN)1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ghep Link11": {
+      "main": [
+        [
+          {
+            "node": "THƯ1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ghep Link12": {
+      "main": [
+        [
+          {
+            "node": "Lan1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ghep Link13": {
+      "main": [
+        [
+          {
+            "node": "LAN ANH1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger2": {
+      "main": [
+        [
+          {
+            "node": "Check last day2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check last day2": {
+      "main": [
+        [
+          {
+            "node": "If2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If2": {
+      "main": [
+        [
+          {
+            "node": "Search files and folders1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Search files and folders1": {
+      "main": [
+        [
+          {
+            "node": "Switch1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "LAN ANH": {
+      "main": [
+        [
+          {
+            "node": "Nhắn ZL CHO HA1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HÀ (LỚN)": {
+      "main": [
+        [
+          {
+            "node": "Nhắn ZL CHO HA2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "PHƯƠNG ANH": {
+      "main": [
+        [
+          {
+            "node": "Nhắn ZL CHO HA3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "3cd577af-89d4-4792-93bb-42d50d0b9883",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "1a4961a59176d5fd864e9eb69e150a7df1eee10d7450116c18cb0ec2a61b8195"
+  },
+  "id": "7dOwhSzNb9SBlCh8",
+  "tags": []
+}

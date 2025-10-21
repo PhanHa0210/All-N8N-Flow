@@ -1,0 +1,238 @@
+{
+  "name": "Dang_Ky_Zalo",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "ZALO-PNH",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        112,
+        320
+      ],
+      "id": "5aff1b35-e67d-4f35-bf20-95c9fa2937ee",
+      "name": "Webhook",
+      "webhookId": "5ec2dccf-9762-435b-b8c7-79a40ae43827"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://bot-api.zapps.me/bot2597159352573319382:lulppyLFgNoinVzTFsuwZXnUCZUVNBFDJtclvrHBruuvMspobLKQzymKbvCUNDzY/setWebhook",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "url",
+              "value": "https://6gl3y83b.rsrv.host/webhook/ZALO-PNH"
+            },
+            {
+              "name": "secret_token",
+              "value": "phanngocha0123"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "048c1132-0c49-4573-95c2-e74a9b2592f3",
+      "name": "Đăng ký bot"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://bot-api.zapps.me/bot2597159352573319382:lulppyLFgNoinVzTFsuwZXnUCZUVNBFDJtclvrHBruuvMspobLKQzymKbvCUNDzY/setWebhook",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "url",
+              "value": "https://7hnngdy7.rpcl.dev/webhook/ZALO-PNH"
+            },
+            {
+              "name": "secret_token",
+              "value": "phanngocha0123"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        384,
+        0
+      ],
+      "id": "ec586185-bf0e-4073-94b0-ddace2e31ed3",
+      "name": "LẤY ID TỪNG TÀI KHOẢN"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Lấy tất cả item từ node trước (Webhook)\nconst items = $input.all();\n\nreturn items.map(item => {\n  // payload từ Webhook node thường nằm ở item.json.body\n  let body = item.json?.body ?? item.body ?? item.json ?? {};\n\n  // Nếu body là string thì parse\n  if (typeof body === 'string') {\n    try { body = JSON.parse(body); } catch (e) {}\n  }\n\n  // Lấy các field an toàn với optional chaining\n  const msg = body?.message ?? {};\n  const chat = msg?.chat ?? {};\n  const from = msg?.from ?? {};\n\n  const chatType    = chat?.chat_type || '';           // \"PRIVATE\" | \"GROUP\" | ...\n  const chatId      = chat?.id || '';                  // id phòng/đoạn chat\n  const userId      = from?.id || chatId || '';        // id người gửi (trong ví dụ trùng chatId)\n  const displayName = from?.display_name || '';        // \"Phương Thảo\"\n  const messageId   = msg?.message_id || '';\n  const text        = msg?.text || '';\n  const timestampMs = msg?.date || null;\n  const isoTime     = timestampMs ? new Date(Number(timestampMs)).toISOString() : null;\n\n  // Nếu cần phân biệt room_id cho group và private:\n  // - PRIVATE: room_id có thể để trống hoặc = chatId (tuỳ cách bạn muốn lưu)\n  // - GROUP: room_id = chatId, user_id = from.id\n  const isGroup = chatType && chatType.toUpperCase() !== 'PRIVATE';\n  const roomId  = isGroup ? chatId : '';  // Nếu muốn luôn có room_id thì đặt = chatId cho mọi loại\n\n  return {\n    json: {\n      // Các trường bạn yêu cầu\n      display_name: displayName,\n      id: userId,          // id của user (trong ví dụ = \"b2d44a9fefd3068d5fc2\")\n\n      // Thêm các trường hữu ích khác (tuỳ bạn có dùng hay không)\n      chat_type: chatType, // \"PRIVATE\"\n      chat_id: chatId,     // id của đoạn chat (cũng chính là \"room\" nếu là group)\n      room_id: roomId,     // chỉ set khi là group (theo logic trên)\n      message_id: messageId,\n      text,\n      timestamp_ms: timestampMs,\n      time_iso: isoTime,\n      is_group: isGroup,\n\n      // Giữ 1 bản raw để debug nếu cần\n      raw: body\n    }\n  };\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        352,
+        320
+      ],
+      "id": "062a30b4-6f97-4b04-9c0c-6dbcac481025",
+      "name": "Code"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1051umf4m5MBN8p-V3L4wsLDlRDvFpyClF_8d_dsCVTU",
+          "mode": "list",
+          "cachedResultName": "LẤY THÔNG TIN ZALO",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1051umf4m5MBN8p-V3L4wsLDlRDvFpyClF_8d_dsCVTU/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Trang tính1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1051umf4m5MBN8p-V3L4wsLDlRDvFpyClF_8d_dsCVTU/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "ACC": "={{ $json.display_name }}",
+            "ID Room ZL": "={{ $json.id }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "ACC",
+              "displayName": "ACC",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ID Room ZL",
+              "displayName": "ID Room ZL",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        624,
+        320
+      ],
+      "id": "26fba328-873c-4c0e-b8a5-a3d95e132786",
+      "name": "Append row in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "RKhU2jItzkOVzxAZ",
+          "name": "Google Sheets account"
+        }
+      }
+    }
+  ],
+  "pinData": {
+    "Webhook": [
+      {
+        "json": {
+          "headers": {
+            "host": "6gl3y83b.rsrv.host",
+            "user-agent": "Java/1.8.0_192",
+            "content-length": "278",
+            "accept": "text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2",
+            "accept-encoding": "gzip, br",
+            "cdn-loop": "cloudflare; loops=1",
+            "cf-connecting-ip": "2001:df0:1a:344::5",
+            "cf-ipcountry": "VN",
+            "cf-ray": "9762f010093b04e5-HKG",
+            "cf-visitor": "{\"scheme\":\"https\"}",
+            "content-type": "application/json",
+            "x-bot-api-secret-token": "phanngocha0123",
+            "x-forwarded-for": "2001:df0:1a:344::5, 172.71.215.157",
+            "x-forwarded-host": "6gl3y83b.rsrv.host",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "48b78944b8a9",
+            "x-real-ip": "172.71.215.157"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "event_name": "message.text.received",
+            "message": {
+              "date": 1756374975772,
+              "chat": {
+                "chat_type": "PRIVATE",
+                "id": "74c2639d3ecfd7918ede"
+              },
+              "message_id": "4114d2acd7c96d9134de",
+              "from": {
+                "id": "74c2639d3ecfd7918ede",
+                "is_bot": false,
+                "display_name": "Phan Hà"
+              },
+              "text": "🌺🌼🌻🔥🌞💌"
+            }
+          },
+          "webhookUrl": "https://6gl3y83b.rsrv.host/webhook/ZALO-PNH",
+          "executionMode": "production"
+        }
+      }
+    ]
+  },
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "cd1b42f6-3d95-4e20-a34a-2e9c07d94d21",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "1a4961a59176d5fd864e9eb69e150a7df1eee10d7450116c18cb0ec2a61b8195"
+  },
+  "id": "UzxtquoFnpLN57AD",
+  "tags": []
+}
