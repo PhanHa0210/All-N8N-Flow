@@ -1,0 +1,223 @@
+{
+  "name": "Ghi data BN vao Sheet",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "spk-data",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -272,
+        224
+      ],
+      "id": "82b8af98-4ad7-42ad-ad1e-d25a2020f00a",
+      "name": "Webhook",
+      "webhookId": "41a8ace7-3601-464e-981d-11e132c28047"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1C-3lXdO-kyr38qqCsjqeEr-skwXHZIsVFTrdB4DbCMc",
+          "mode": "list",
+          "cachedResultName": "Queue Data",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1C-3lXdO-kyr38qqCsjqeEr-skwXHZIsVFTrdB4DbCMc/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Data",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1C-3lXdO-kyr38qqCsjqeEr-skwXHZIsVFTrdB4DbCMc/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Họ tên": "={{ $json.full_name }}",
+            "SĐT": "={{ $json.phone }}",
+            "Bác sĩ": "={{ $json.doctor_name }}",
+            "Ngày": "={{ $json.date }}",
+            "Giờ": "={{ $json.time }}"
+          },
+          "matchingColumns": [
+            "Họ tên"
+          ],
+          "schema": [
+            {
+              "id": "Họ tên",
+              "displayName": "Họ tên",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "SĐT",
+              "displayName": "SĐT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Bác sĩ",
+              "displayName": "Bác sĩ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Ngày",
+              "displayName": "Ngày",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Giờ",
+              "displayName": "Giờ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        256,
+        224
+      ],
+      "id": "7983c213-815d-4df2-8d58-65915494cdcd",
+      "name": "Ghi thêm dòng",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YiefKfUTakhRE6iu",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Lặp qua tất cả item nhận từ webhook\nreturn items.map(item => {\n  const body = item.json.body || {};\n\n  // Lấy thời gian hiện tại theo múi giờ Việt Nam\n  const now = new Date();\n\n  const dateVN = now.toLocaleDateString(\"vi-VN\", {\n    timeZone: \"Asia/Ho_Chi_Minh\"\n  });\n\n  const timeVN = now.toLocaleTimeString(\"vi-VN\", {\n    timeZone: \"Asia/Ho_Chi_Minh\",\n    hour12: false\n  });\n\n  // Lọc ra các trường cần thiết\n  const clean = {\n    full_name: body.full_name?.trim() || \"\",\n    phone: body.phone?.trim() || \"\",\n    doctor_name: body.doctor_name?.trim() || \"\",\n    status: body.status?.trim() || \"\",\n    done: body.done?.trim() || \"\",\n    date: dateVN,\n    time: timeVN\n  };\n\n  // Trả lại dữ liệu sạch\n  return { json: clean };\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        0,
+        224
+      ],
+      "id": "f4564d0c-637a-4f9b-900a-3dc8df7dcaa6",
+      "name": "Lọc body"
+    },
+    {
+      "parameters": {
+        "content": "## Đổi webhook tròn file php plugin endpoint nhé\n## \n",
+        "width": 544
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -288,
+        48
+      ],
+      "id": "d90c53fa-ff71-482c-981b-69ad60076d4e",
+      "name": "Sticky Note"
+    }
+  ],
+  "pinData": {
+    "Webhook": [
+      {
+        "json": {
+          "headers": {
+            "host": "8jl5gbjc.rcsrv.net",
+            "user-agent": "WordPress/6.8.3; https://haphan.info",
+            "content-length": "107",
+            "accept": "*/*",
+            "accept-encoding": "gzip, br",
+            "cdn-loop": "cloudflare; loops=1",
+            "cf-connecting-ip": "202.92.4.30",
+            "cf-ipcountry": "VN",
+            "cf-ray": "99d455a69b2904e8-HKG",
+            "cf-visitor": "{\"scheme\":\"https\"}",
+            "content-type": "application/json",
+            "x-forwarded-for": "202.92.4.30, 172.71.214.14",
+            "x-forwarded-host": "8jl5gbjc.rcsrv.net",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "e55373ffb478",
+            "x-real-ip": "172.71.214.14"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "full_name": "Nguyen Van A",
+            "phone": "0912345678",
+            "doctor_name": "Hùng",
+            "status": "ƯT",
+            "done": "Yes"
+          },
+          "webhookUrl": "https://8jl5gbjc.rcsrv.net/webhook/spk-data",
+          "executionMode": "production"
+        }
+      }
+    ]
+  },
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Lọc body",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lọc body": {
+      "main": [
+        [
+          {
+            "node": "Ghi thêm dòng",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "Asia/Bangkok",
+    "callerPolicy": "workflowsFromSameOwner",
+    "availableInMCP": false
+  },
+  "versionId": "86b4ef29-4557-4fba-96d3-906915a13471",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "591b23c3b12e308eca072c5052e31e166097e0c67690ff9666d6a539227b5f93"
+  },
+  "id": "G2dEdi1HEvO9N1nz",
+  "tags": []
+}
